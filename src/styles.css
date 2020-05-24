@@ -3,6 +3,7 @@
 
     1. imports
     2. base styles
+    3. cards
     ------------------ */
 
 /* 1. imports */
@@ -12,8 +13,10 @@
 :root {
   /* colors */
   --primary: hsl(180, 29%, 50%);
-  --bg: hsl(180, 52%, 96%);
-  --tags: hsl(180, 31%, 95%);
+  --gray-1: hsl(180, 52%, 96%);
+  --gray-2: hsl(180, 31%, 95%);
+  --gray-3: hsl(180, 8%, 52%);
+  --gray-4: hsl(180, 14%, 20%);
 }
 
 html {
@@ -139,4 +142,10 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* 3. cards */
+.card {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px -15px var(--gray-3);
 }
