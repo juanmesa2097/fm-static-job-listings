@@ -1,1 +1,12 @@
-<app-listings-job></app-listings-job>
+<div
+  *ngFor="let job of jobs"
+  class="item-wrapper d-flex flex-column flex-md-row py-4 mb-4"
+>
+  <div class="container row">
+    <div class="col-2">
+      <app-listings-logo></app-listings-logo>
+    </div>
+    <div class="col-4">Company info</div>
+    <div class="col-6">tags</div>
+  </div>
+</div>
