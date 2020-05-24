@@ -1,16 +1,20 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 @Component({
   selector: 'app-listings-logo',
   templateUrl: './listings-logo.component.html',
   styleUrls: ['./listings-logo.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListingsLogoComponent implements OnInit {
+  @Input() logo: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
