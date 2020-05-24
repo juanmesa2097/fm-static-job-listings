@@ -1,1 +1,5 @@
-<p>listings-tags works!</p>
+<div
+  class="tags-wrapper tags-wrapper d-flex justify-content-end align-items-center"
+>
+  <app-tag *ngFor="let tag of tags" [tag]="tag"></app-tag>
+</div>

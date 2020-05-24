@@ -107,6 +107,38 @@ h6,
   font-size: 1rem;
 }
 
+.text-primary {
+  color: var(--primary);
+}
+.text-gray-1 {
+  color: var(--gray-1);
+}
+.text-gray-2 {
+  color: var(--gray-2);
+}
+.text-gray-3 {
+  color: var(--gray-3);
+}
+.text-gray-4 {
+  color: var(--gray-3);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-gray-1 {
+  background-color: var(--gray-1);
+}
+.bg-gray-2 {
+  background-color: var(--gray-2);
+}
+.bg-gray-3 {
+  background-color: var(--gray-3);
+}
+.bg-gray-4 {
+  background-color: var(--gray-3);
+}
+
 /* 3. cards */
 .item-wrapper {
   background-color: #fff;

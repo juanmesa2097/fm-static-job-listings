@@ -13,4 +13,8 @@ export class ListingsPage implements OnInit {
   ngOnInit(): void {
     this.jobsService.getJobs().subscribe((jobs: Job[]) => (this.jobs = jobs));
   }
+
+  displayTags(job: Job) {
+    return [job.role, job.level, ...job.languages, ...job.tools];
+  }
 }

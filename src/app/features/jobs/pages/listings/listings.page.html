@@ -19,7 +19,9 @@
           [featured]="job.featured"
         ></app-listings-info>
       </div>
-      <div class="col-6">tags</div>
+      <div class="col-6">
+        <app-listings-tags [tags]="displayTags(job)"></app-listings-tags>
+      </div>
     </div>
   </div>
 </div>
