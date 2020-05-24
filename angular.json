@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "static-job-listings"
+    }
+  },
+  "defaultProject": "static-job-listings",
+  "cli": {
+    "analytics": "835a07af-29ef-4250-90db-9296cb1492bb"
+  }
 }
