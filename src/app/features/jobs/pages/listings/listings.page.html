@@ -1,12 +1,25 @@
-<div
-  *ngFor="let job of jobs"
-  class="item-wrapper d-flex flex-column flex-md-row py-4 mb-4"
->
-  <div class="container row">
-    <div class="col-2">
-      <app-listings-logo [logo]="job.logo"></app-listings-logo>
+<div class="listings-wrapper">
+  <app-listings-filter-toolbar></app-listings-filter-toolbar>
+  <div
+    *ngFor="let job of jobs"
+    class="item-wrapper d-flex flex-column flex-md-row py-5 mb-4"
+  >
+    <div class="container row align-items-center position-relative">
+      <div class="col-2">
+        <app-listings-logo [logo]="job.logo"></app-listings-logo>
+      </div>
+      <div class="col-4">
+        <app-listings-info
+          [company]="job.company"
+          [position]="job.position"
+          [postedAt]="job.postedAt"
+          [contract]="job.contract"
+          [location]="job.location"
+          [newJob]="job.new"
+          [featured]="job.featured"
+        ></app-listings-info>
+      </div>
+      <div class="col-6">tags</div>
     </div>
-    <div class="col-4">Company info</div>
-    <div class="col-6">tags</div>
   </div>
 </div>

@@ -1,1 +1,13 @@
-<p>listings-info works!</p>
+<div class="d-flex flex-column ml-md-n5">
+  <div class="d-flex align-items-center">
+    <span>{{ company }}</span>
+    <span *ngIf="newJob">NEW!</span>
+    <span *ngIf="featured">FEATURED!</span>
+  </div>
+  <a href="#" class="font-weight-bold">{{ position }}</a>
+  <div class="d-flex align-items-center">
+    <span>{{ postedAt }}</span>
+    <span>{{ contract }}</span>
+    <span>{{ location }}</span>
+  </div>
+</div>
