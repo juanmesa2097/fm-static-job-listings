@@ -17,6 +17,13 @@
   --gray-2: hsl(180, 31%, 95%);
   --gray-3: hsl(180, 8%, 52%);
   --gray-4: hsl(180, 14%, 20%);
+  --d: hsl(185, 38%, 87%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -147,5 +154,7 @@ a {
 /* 3. cards */
 .card {
   background-color: #fff;
-  box-shadow: 10px 10px 30px -15px var(--gray-3);
+  border: solid 1px #efefef;
+  box-shadow: 0px 10px 20px -2px rgb(214, 233, 236);
+  padding: 4rem;
 }
