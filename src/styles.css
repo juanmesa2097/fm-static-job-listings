@@ -154,6 +154,16 @@ h6,
   white-space: nowrap;
 }
 
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
 .font-weight-700 {
   font-weight: 700;
 }
