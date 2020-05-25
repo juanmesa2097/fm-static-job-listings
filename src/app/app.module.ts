@@ -7,7 +7,7 @@ import { HeaderModule } from './ui/header/header.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HeaderModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, HeaderModule],
   providers: [],
   bootstrap: [AppComponent],
 })

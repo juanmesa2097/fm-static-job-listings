@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { PipesModule } from '@app/shared/pipes/pipes.module';
 import { TagModule } from '@app/ui/tag/tag.module';
 import { ListingsFilterToolbarComponent } from './components/listings-filter-toolbar/listings-filter-toolbar.component';
 import { ListingsInfoComponent } from './components/listings-info/listings-info.component';
@@ -17,6 +18,12 @@ import { ListingsPage } from './pages/listings/listings.page';
     ListingsInfoComponent,
     ListingsTagsComponent,
   ],
-  imports: [CommonModule, JobsRoutingModule, TagModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    JobsRoutingModule,
+    TagModule,
+    HttpClientModule,
+    PipesModule,
+  ],
 })
 export class JobsModule {}

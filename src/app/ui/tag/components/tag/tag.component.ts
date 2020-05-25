@@ -15,8 +15,12 @@ export class TagComponent implements OnInit {
   ngOnInit(): void {}
 
   onChange(e) {
-    console.log(this.tagsService.tags);
     const { value, checked } = e.target;
-    console.log(value, checked);
+
+    if (checked) {
+      this.tagsService.add(value);
+    } else {
+      this.tagsService.remove(value);
+    }
   }
 }

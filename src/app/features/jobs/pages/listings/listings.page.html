@@ -1,7 +1,7 @@
 <div class="listings-wrapper">
   <app-listings-filter-toolbar></app-listings-filter-toolbar>
   <div
-    *ngFor="let job of jobs"
+    *ngFor="let job of jobs | tagFilter: activeTags"
     class="item-wrapper d-flex flex-column flex-md-row py-5 mb-4"
   >
     <div class="container row align-items-center position-relative">
