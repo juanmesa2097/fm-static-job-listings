@@ -1,5 +1,5 @@
 <label
-  class="tag-wrapper d-flex align-items-center justify-content-center mb-0"
+  class="tag-wrapper d-inline-flex align-items-center justify-content-center my-2"
 >
   <input
     *ngIf="!dismissible"
@@ -8,7 +8,7 @@
     [checked]="state"
     (change)="onChange($event)"
   />
-  <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible ml-3' : 'ml-4' }}">
+  <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible' : 'mr-4' }}">
     {{ tag }}
   </div>
   <button

@@ -8,31 +8,29 @@
   <!-- job listings -->
   <div
     *ngFor="let job of jobs | tagFilter: activeTags"
-    class="item-wrapper {{job.featured ? 'featured' : ''}} d-flex flex-column flex-md-row py-5 mt-5 mb-4"
+    class="item-wrapper {{job.featured ? 'featured' : ''}} d-lg-flex align-items-center flex-column flex-lg-row"
   >
-    <div class="container row align-items-center position-relative">
-      <!-- logo -->
-      <div class="col-2">
-        <app-listings-logo [logo]="job.logo"></app-listings-logo>
-      </div>
+    <!-- logo -->
+    <div class="logo-column">
+      <app-listings-logo [logo]="job.logo"></app-listings-logo>
+    </div>
 
-      <!-- job info -->
-      <div class="col-4">
-        <app-listings-info
-          [company]="job.company"
-          [position]="job.position"
-          [postedAt]="job.postedAt"
-          [contract]="job.contract"
-          [location]="job.location"
-          [newJob]="job.new"
-          [featured]="job.featured"
-        ></app-listings-info>
-      </div>
+    <!-- job info -->
+    <div class="info-column">
+      <app-listings-info
+        [company]="job.company"
+        [position]="job.position"
+        [postedAt]="job.postedAt"
+        [contract]="job.contract"
+        [location]="job.location"
+        [newJob]="job.new"
+        [featured]="job.featured"
+      ></app-listings-info>
+    </div>
 
-      <!-- tags -->
-      <div class="col-6">
-        <app-listings-tags [tags]="displayTags(job)"></app-listings-tags>
-      </div>
+    <!-- tags -->
+    <div class="tags-column">
+      <app-listings-tags [tags]="displayTags(job)"></app-listings-tags>
     </div>
   </div>
 </div>

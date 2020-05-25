@@ -148,6 +148,12 @@ h6,
   text-decoration: none !important;
 }
 
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .font-weight-700 {
   font-weight: 700;
 }
@@ -159,4 +165,5 @@ h6,
   border-radius: 6px;
   border-left: solid 6px transparent;
   box-shadow: 0px 10px 20px -2px rgb(214, 233, 236);
+  position: relative;
 }

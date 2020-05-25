@@ -28,6 +28,17 @@
 .bottom-info {
   font-size: 1.3rem;
   color: var(--gray-3);
+  border-bottom: solid 1px hsl(0, 0%, 77%);
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .bottom-info {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .bottom-info span + .split {

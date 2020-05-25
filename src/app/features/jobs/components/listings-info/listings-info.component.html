@@ -1,15 +1,15 @@
-<div class="d-flex flex-column ml-md-n5">
+<div class="d-flex flex-column">
   <div class="d-flex align-items-center mb-4">
     <span class="text-primary font-weight-700">{{ company }}</span>
     <span *ngIf="newJob" class="job-tag job-tag-new ml-4 mr-2">NEW!</span>
-    <span *ngIf="featured" class="job-tag job-tag-featured ml-1"
-      >FEATURED!</span
-    >
+    <span *ngIf="featured" class="job-tag job-tag-featured ml-1">FEATURED</span>
   </div>
   <a
     routerLink="/"
-    class="job-position h3 font-weight-700 text-decoration-none mb-3"
-    >{{ position }}</a
+    class="job-position h3 font-weight-700 text-decoration-none text-ellipsis mb-3"
+    title="{{ position }}"
+  >
+    {{ position }}</a
   >
   <div class="bottom-info d-flex align-items-center">
     <span>{{ postedAt }}</span>
