@@ -5,6 +5,7 @@
     *ngIf="!dismissible"
     type="checkbox"
     value="{{ tag }}"
+    [checked]="state"
     (change)="onChange($event)"
   />
   <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible ml-3' : 'ml-4' }}">
