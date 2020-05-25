@@ -41,6 +41,6 @@
   transition: all 100ms ease;
 }
 
-.tag-dismiss-button:hover {
+.tag-wrapper:hover .tag-dismiss-button {
   background-color: var(--gray-4);
 }
