@@ -1,3 +1,21 @@
+.animate-container {
+  animation-name: listingsEntrance;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes listingsEntrance {
+  from {
+    transform: translateY(100px) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
 .listings-wrapper {
   position: relative;
   top: -35px;

@@ -12,6 +12,7 @@ export class ListingsPage implements OnInit, OnDestroy {
   jobs: Job[];
   activeTags: string[];
   tabsSubscription: Subscription;
+  loaded = false;
 
   constructor(
     private jobsService: JobsService,
@@ -19,7 +20,10 @@ export class ListingsPage implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.jobsService.getJobs().subscribe((jobs: Job[]) => (this.jobs = jobs));
+    this.jobsService.getJobs().subscribe((jobs: Job[]) => {
+      this.jobs = jobs;
+      this.loaded = true;
+    });
 
     this.tabsSubscription = this.tagsService.tagsSubject.subscribe(
       (tags) => (this.activeTags = tags)
