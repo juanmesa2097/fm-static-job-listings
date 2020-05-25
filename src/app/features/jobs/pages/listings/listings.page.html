@@ -8,7 +8,7 @@
   <!-- job listings -->
   <div
     *ngFor="let job of jobs | tagFilter: activeTags"
-    class="item-wrapper d-flex flex-column flex-md-row py-5 mb-4"
+    class="item-wrapper {{job.featured ? 'featured' : ''}} d-flex flex-column flex-md-row py-5 mt-5 mb-4"
   >
     <div class="container row align-items-center position-relative">
       <!-- logo -->
