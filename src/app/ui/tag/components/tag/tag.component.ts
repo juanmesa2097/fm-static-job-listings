@@ -23,4 +23,8 @@ export class TagComponent implements OnInit {
       this.tagsService.remove(value);
     }
   }
+
+  onClickDismiss() {
+    this.tagsService.remove(this.tag);
+  }
 }

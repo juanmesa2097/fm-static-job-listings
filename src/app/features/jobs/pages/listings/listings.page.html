@@ -1,13 +1,22 @@
 <div class="listings-wrapper">
-  <app-listings-filter-toolbar></app-listings-filter-toolbar>
+  <!-- toolbar -->
+  <app-listings-filter-toolbar
+    [activeTags]="activeTags"
+    (clear)="onClear()"
+  ></app-listings-filter-toolbar>
+
+  <!-- job listings -->
   <div
     *ngFor="let job of jobs | tagFilter: activeTags"
     class="item-wrapper d-flex flex-column flex-md-row py-5 mb-4"
   >
     <div class="container row align-items-center position-relative">
+      <!-- logo -->
       <div class="col-2">
         <app-listings-logo [logo]="job.logo"></app-listings-logo>
       </div>
+
+      <!-- job info -->
       <div class="col-4">
         <app-listings-info
           [company]="job.company"
@@ -19,6 +28,8 @@
           [featured]="job.featured"
         ></app-listings-info>
       </div>
+
+      <!-- tags -->
       <div class="col-6">
         <app-listings-tags [tags]="displayTags(job)"></app-listings-tags>
       </div>

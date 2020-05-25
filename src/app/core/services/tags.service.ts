@@ -15,11 +15,13 @@ export class TagsService {
 
   add(tag: string) {
     this.tagsSubject.next([...this.tags, tag]);
-    console.log(this.tags);
   }
 
   remove(tag: string) {
     this.tagsSubject.next(this.tags.filter((t) => t !== tag));
-    console.log(this.tags);
+  }
+
+  clear() {
+    this.tagsSubject.next([]);
   }
 }

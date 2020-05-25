@@ -1,4 +1,6 @@
-<label class="tag-wrapper d-flex align-items-center justify-content-center">
+<label
+  class="tag-wrapper d-flex align-items-center justify-content-center mb-0"
+>
   <input
     *ngIf="!dismissible"
     type="checkbox"
@@ -8,7 +10,11 @@
   <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible ml-3' : 'ml-4' }}">
     {{ tag }}
   </div>
-  <button *ngIf="dismissible" class="tag-dismiss-button">
+  <button
+    *ngIf="dismissible"
+    class="tag-dismiss-button"
+    (click)="onClickDismiss()"
+  >
     <img src="../../../../../assets/images/icon-remove.svg" alt="Icon remove" />
   </button>
 </label>

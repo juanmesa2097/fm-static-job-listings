@@ -20,6 +20,7 @@ export class ListingsPage implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.jobsService.getJobs().subscribe((jobs: Job[]) => (this.jobs = jobs));
+
     this.tabsSubscription = this.tagsService.tagsSubject.subscribe(
       (tags) => (this.activeTags = tags)
     );
@@ -31,5 +32,9 @@ export class ListingsPage implements OnInit, OnDestroy {
 
   displayTags(job: Job) {
     return [job.role, job.level, ...job.languages, ...job.tools];
+  }
+
+  onClear() {
+    this.tagsService.clear();
   }
 }

@@ -1,4 +1,26 @@
 .toolbar {
+  height: 80px;
   margin-bottom: 4rem;
   padding: 2.5rem 0;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 300ms ease;
+}
+
+.toolbar.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.clear-button {
+  background: transparent;
+  border: solid 1px transparent;
+  color: var(--primary);
+  transition: all 100ms ease;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.clear-button:hover {
+  text-decoration: underline;
 }
