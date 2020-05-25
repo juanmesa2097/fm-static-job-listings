@@ -1,0 +1,10 @@
+.footer {
+  font-size: 1.3rem;
+  padding: 2rem 0;
+}
+
+.footer div {
+  border-top: solid 1px #e4e4e4;
+  text-align: center;
+  padding: 2rem 0;
+}

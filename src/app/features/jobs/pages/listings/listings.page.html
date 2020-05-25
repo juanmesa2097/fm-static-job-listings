@@ -1,0 +1,38 @@
+<div *ngIf="loaded" class="animate-container">
+  <div class="listings-wrapper">
+    <!-- toolbar -->
+    <app-listings-filter-toolbar
+      [activeTags]="activeTags"
+      (clear)="onClear()"
+    ></app-listings-filter-toolbar>
+
+    <!-- job listings -->
+    <div
+      *ngFor="let job of jobs | tagFilter: activeTags"
+      class="item-wrapper {{job.featured ? 'featured' : ''}} d-lg-flex align-items-center flex-column flex-lg-row"
+    >
+      <!-- logo -->
+      <div class="logo-column">
+        <app-listings-logo [logo]="job.logo"></app-listings-logo>
+      </div>
+
+      <!-- job info -->
+      <div class="info-column">
+        <app-listings-info
+          [company]="job.company"
+          [position]="job.position"
+          [postedAt]="job.postedAt"
+          [contract]="job.contract"
+          [location]="job.location"
+          [newJob]="job.new"
+          [featured]="job.featured"
+        ></app-listings-info>
+      </div>
+
+      <!-- tags -->
+      <div class="tags-column">
+        <app-listings-tags [tags]="displayTags(job)"></app-listings-tags>
+      </div>
+    </div>
+  </div>
+</div>

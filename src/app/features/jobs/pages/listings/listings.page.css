@@ -1,0 +1,63 @@
+.animate-container {
+  animation-name: listingsEntrance;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes listingsEntrance {
+  from {
+    transform: translateY(100px) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.listings-wrapper {
+  position: relative;
+  top: -35px;
+}
+
+.item-wrapper {
+  margin-bottom: 4.5rem;
+  padding: 3.5rem 1rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .item-wrapper {
+    margin-bottom: 2.5rem;
+    padding: 3.5rem 1rem;
+  }
+}
+
+.featured {
+  border-left-color: var(--primary);
+}
+
+.logo-column {
+  position: absolute;
+  top: -25px;
+  left: 15px;
+}
+
+.logo-column,
+.info-column,
+.tags-column {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .logo-column {
+    width: 12%;
+    position: static;
+  }
+  .info-column {
+    width: 38%;
+  }
+  .tags-column {
+    width: 50%;
+  }
+}

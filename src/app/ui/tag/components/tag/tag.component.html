@@ -1,0 +1,21 @@
+<label
+  class="tag-wrapper d-inline-flex align-items-center justify-content-center my-2"
+>
+  <input
+    *ngIf="!dismissible"
+    type="checkbox"
+    value="{{ tag }}"
+    [checked]="state"
+    (change)="onChange($event)"
+  />
+  <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible' : 'mr-4' }}">
+    {{ tag }}
+  </div>
+  <button
+    *ngIf="dismissible"
+    class="tag-dismiss-button"
+    (click)="onClickDismiss()"
+  >
+    <img src="../../../../../assets/images/icon-remove.svg" alt="Icon remove" />
+  </button>
+</label>

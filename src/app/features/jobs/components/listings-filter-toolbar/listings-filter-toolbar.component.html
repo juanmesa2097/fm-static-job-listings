@@ -1,0 +1,19 @@
+<div
+  class="toolbar item-wrapper d-flex justify-content-between align-items-center px-5 {{
+    activeTags.length > 0 ? 'show' : ''
+  }}"
+>
+  <div
+    class="tags-wrapper d-flex justify-content-start align-items-center flex-wrap"
+  >
+    <app-tag
+      *ngFor="let tag of activeTags"
+      [tag]="tag"
+      [dismissible]="true"
+    ></app-tag>
+  </div>
+
+  <div class="mr-4 d-flex align-items-center">
+    <button class="clear-button" (click)="onClickClear()">Clear</button>
+  </div>
+</div>

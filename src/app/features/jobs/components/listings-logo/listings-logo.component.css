@@ -1,0 +1,18 @@
+.logo-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+}
+
+@media (min-width: 992px) {
+  .logo-wrapper {
+    position: static;
+    width: 80px;
+    margin: 0 auto;
+  }
+}
+
+.logo-wrapper img {
+  width: 100%;
+}
