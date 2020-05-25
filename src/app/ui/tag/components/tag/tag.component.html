@@ -1,6 +1,11 @@
 <label class="tag-wrapper d-flex align-items-center justify-content-center">
-  <input *ngIf="!dismissible" type="checkbox" (change)="onChange($event)" />
-  <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible ml-3' : 'mx-3' }}">
+  <input
+    *ngIf="!dismissible"
+    type="checkbox"
+    value="{{ tag }}"
+    (change)="onChange($event)"
+  />
+  <div class="tag p-3 my-0 {{ dismissible ? 'tag-dismissible ml-3' : 'ml-4' }}">
     {{ tag }}
   </div>
   <button *ngIf="dismissible" class="tag-dismiss-button">
